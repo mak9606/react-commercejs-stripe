@@ -8,7 +8,7 @@ import { loadStripe } from "@stripe/stripe-js";
 
 
 
-const stripePromise=loadStripe('pk_test_grV6LcarYxcwVfWBOEudDRZa');
+const stripePromise=loadStripe(process.env.REACT_STRIPE_PUBLIC_KEY);
 
 
 const PaymentForm = ({checkoutToken,incSteps,shippingData,decSteps,onCaptureCheckout,timeout}) => {
